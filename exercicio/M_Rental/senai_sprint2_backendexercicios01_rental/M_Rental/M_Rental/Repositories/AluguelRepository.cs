@@ -129,7 +129,56 @@ namespace M_Rental.Repositories
 
         public List<AluguelDomain> ListarTodos()
         {
-            throw new NotImplementedException();
+            //Cria uma listaGeneros onde serão armazenados os dados.
+            List<AluguelDomain> listaAluguel = new List<AluguelDomain>();
+
+            //Declara a SQL connection con passando a string de conexao como parametro.
+            using (SqlConnection con = new SqlConnection(stringConexao))
+            {
+                //Declara a instrucao a ser executada
+                string querySelectALL = "SELECT idAluguel,idCliente,idVeiculo,dataRetirada,dataDevolucao FROM ALUGUEL;";
+
+                //Abre a conexão com o banco de dados.
+                con.Open();
+
+                //Declara o SqlDataReader rar para percorrer a tabela do banco de dados.
+                SqlDataReader rdr;
+
+                //Declara o SQLCommand cmd passando a query que sera executada e a conexão com parâmetros.
+                using (SqlCommand cmd = new SqlCommand(querySelectALL, con))
+                {
+                    //executa a query e armaneza os dados no rdr.
+                    rdr = cmd.ExecuteReader();
+
+                    //Enquanto houver registros para serem lidos no rdr, o laço se repete.
+                    while (rdr.Read())
+                    {
+                        //Instancia um objeto genero do tipo GeneroDomain
+                        AluguelDomain genero = new AluguelDomain()
+                        {
+                            //atribui a propriedade idAluguel o valor da primeira coluna na tabela do banco de dados.
+                            idAluguel = Convert.ToInt32(rdr[0]),
+
+                            //atribui a propriedade idCliente o valor da segunda coluna na tabela do banco de dados.
+                            idCliente = Convert.ToInt32(rdr[0]),
+
+                            //atribui a propriedade idVeiculo o valor da terceira coluna na tabela do banco de dados.
+                            idVeiculo = Convert.ToInt32(rdr[0]),
+
+                            //atribui a propriedade dataRetirada o valor da quarta coluna na tabela do banco de dados.
+                            dataRetirada = rdr[1].ToString(),
+
+                            //atribui a propriedade dataDevolucao o valor da quinta coluna na tabela do banco de dados.
+                            dataDevolucao = rdr[1].ToString()
+                        };
+
+                        //Adicionar o objeto genero criado a lista listaGeneros.
+                        listaAluguel.Add(genero);
+                    }
+                }
+            }
+
+            return listaAluguel;
         }
     }
 }
