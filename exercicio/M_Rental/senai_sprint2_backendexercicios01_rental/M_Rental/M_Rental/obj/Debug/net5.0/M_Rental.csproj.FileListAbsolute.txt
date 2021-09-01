@@ -1,0 +1,6 @@
+C:\Users\Usuario\Documents\Vinicius\senai\Sprint-2\exercicio\M_Rental\senai_sprint2_backendexercicios01_rental\M_Rental\M_Rental\obj\Debug\net5.0\M_Rental.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\Vinicius\senai\Sprint-2\exercicio\M_Rental\senai_sprint2_backendexercicios01_rental\M_Rental\M_Rental\obj\Debug\net5.0\M_Rental.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Documents\Vinicius\senai\Sprint-2\exercicio\M_Rental\senai_sprint2_backendexercicios01_rental\M_Rental\M_Rental\obj\Debug\net5.0\M_Rental.AssemblyInfoInputs.cache
+C:\Users\Usuario\Documents\Vinicius\senai\Sprint-2\exercicio\M_Rental\senai_sprint2_backendexercicios01_rental\M_Rental\M_Rental\obj\Debug\net5.0\M_Rental.AssemblyInfo.cs
+C:\Users\Usuario\Documents\Vinicius\senai\Sprint-2\exercicio\M_Rental\senai_sprint2_backendexercicios01_rental\M_Rental\M_Rental\obj\Debug\net5.0\M_Rental.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\Vinicius\senai\Sprint-2\exercicio\M_Rental\senai_sprint2_backendexercicios01_rental\M_Rental\M_Rental\obj\Debug\net5.0\M_Rental.MvcApplicationPartsAssemblyInfo.cache
