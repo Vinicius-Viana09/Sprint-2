@@ -6,5 +6,3 @@ build_property.ProjectTypeGuids =
 build_property.PublishSingleFile = 
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
-build_property.RootNamespace = M_Rental
-build_property.ProjectDir = C:\Users\Usuario\Documents\Vinicius\senai\Sprint-2\exercicio\M_Rental\senai_sprint2_backendexercicios01_rental\M_Rental\M_Rental\

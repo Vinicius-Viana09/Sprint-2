@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Documents\\Vinicius\\senai\\Sprint-2\\exercicio\\M_Rental\\senai_sprint2_backendexercicios01_rental\\M_Rental\\M_Rental\\M_Rental.csproj": {}
+    "C:\\Users\\dev\\Desktop\\Sprint-2\\exercicio\\M_Rental\\senai_sprint2_backendexercicios01_rental\\M_Rental\\M_Rental\\M_Rental.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Documents\\Vinicius\\senai\\Sprint-2\\exercicio\\M_Rental\\senai_sprint2_backendexercicios01_rental\\M_Rental\\M_Rental\\M_Rental.csproj": {
+    "C:\\Users\\dev\\Desktop\\Sprint-2\\exercicio\\M_Rental\\senai_sprint2_backendexercicios01_rental\\M_Rental\\M_Rental\\M_Rental.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Documents\\Vinicius\\senai\\Sprint-2\\exercicio\\M_Rental\\senai_sprint2_backendexercicios01_rental\\M_Rental\\M_Rental\\M_Rental.csproj",
+        "projectUniqueName": "C:\\Users\\dev\\Desktop\\Sprint-2\\exercicio\\M_Rental\\senai_sprint2_backendexercicios01_rental\\M_Rental\\M_Rental\\M_Rental.csproj",
         "projectName": "M_Rental",
-        "projectPath": "C:\\Users\\Usuario\\Documents\\Vinicius\\senai\\Sprint-2\\exercicio\\M_Rental\\senai_sprint2_backendexercicios01_rental\\M_Rental\\M_Rental\\M_Rental.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Documents\\Vinicius\\senai\\Sprint-2\\exercicio\\M_Rental\\senai_sprint2_backendexercicios01_rental\\M_Rental\\M_Rental\\obj\\",
+        "projectPath": "C:\\Users\\dev\\Desktop\\Sprint-2\\exercicio\\M_Rental\\senai_sprint2_backendexercicios01_rental\\M_Rental\\M_Rental\\M_Rental.csproj",
+        "packagesPath": "C:\\Users\\dev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dev\\Desktop\\Sprint-2\\exercicio\\M_Rental\\senai_sprint2_backendexercicios01_rental\\M_Rental\\M_Rental\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dev\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

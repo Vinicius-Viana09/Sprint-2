@@ -13,5 +13,7 @@ namespace M_Rental.Domain
         public int idModelo { get; set; }
 
         public string nomeModelo { get; set; }
+
+        public int idMarca { get; set; }
     }
 }

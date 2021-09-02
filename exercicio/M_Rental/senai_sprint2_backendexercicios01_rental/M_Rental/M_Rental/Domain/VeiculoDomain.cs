@@ -14,6 +14,8 @@ namespace M_Rental.Domain
 
         public int idModelo { get; set; }
 
+        public int idMarca { get; set; }
+
         public string placaVeiculo { get; set; }
 
  

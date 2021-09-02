@@ -27,12 +27,14 @@ namespace M_Rental.Repositories
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string queryUpdateUrl = "UPDATE ALUGUEL SET dataRetirada = @novoNomeAlu WHERE idAluguel = @idAluAtualizado";
+                string queryUpdateUrl = "UPDATE ALUGUEL SET idCliente = @novoIdCliente, idVeiculo = @novoIdVeiculo, dataRetirada = @novoDataRetirada, dataDevolucao = @novoDataDevolucao WHERE idAluguel = @idAluAtualizado";
 
                 using (SqlCommand cmd = new SqlCommand(queryUpdateUrl, con))
                 {
-                    cmd.Parameters.AddWithValue("@novoNomeAlu", aluguelAtualizado.dataRetirada);
-                    cmd.Parameters.AddWithValue("@novoNomeAlu", aluguelAtualizado.dataDevolucao);
+                    cmd.Parameters.AddWithValue("@novoIdCliente", aluguelAtualizado.idCliente);
+                    cmd.Parameters.AddWithValue("@novoIdVeiculo", aluguelAtualizado.idVeiculo);
+                    cmd.Parameters.AddWithValue("@novoDataRetirada", aluguelAtualizado.dataRetirada);
+                    cmd.Parameters.AddWithValue("@novoDataDevolucao", aluguelAtualizado.dataDevolucao);
                     cmd.Parameters.AddWithValue("@idAluAtualizado", idAluguel);
 
                     con.Open();
@@ -46,7 +48,7 @@ namespace M_Rental.Repositories
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string querySelectById = "SELECT nomeAluguel, idAluguel FROM GENERO WHERE idAluguel = @idAluguel";
+                string querySelectById = "SELECT idAluguel FROM GENERO WHERE idAluguel = @idAluguel";
 
                 con.Open();
 
@@ -84,12 +86,11 @@ namespace M_Rental.Repositories
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
 
-                string queryInsert = "INSERT INTO ALUGUEL (idCliente, idVeiculo, dataRetirada, @dataDevolucao) VALUES (@idCliente, @idVeiculo, @dataRetirada, @dataDevolucao)";
+                string queryInsert = "INSERT INTO ALUGUEL (idCliente, idVeiculo, dataRetirada, dataDevolucao) VALUES (@idCliente, @idVeiculo, @dataRetirada, @dataDevolucao)";
 
                 // Declara o SqlCommand cmd passando a query que será executada e a conexão como parâmetros
                 using (SqlCommand cmd = new SqlCommand(queryInsert, con))
                 {
-                    // Passa o valor do parâmetro @nomeGenero
                     cmd.Parameters.AddWithValue("@idCliente", novoAluguel.idCliente);
                     cmd.Parameters.AddWithValue("@idVeiculo", novoAluguel.idVeiculo);
                     cmd.Parameters.AddWithValue("@nomeGenero", novoAluguel.dataRetirada);
@@ -153,27 +154,27 @@ namespace M_Rental.Repositories
                     //Enquanto houver registros para serem lidos no rdr, o laço se repete.
                     while (rdr.Read())
                     {
-                        //Instancia um objeto genero do tipo GeneroDomain
-                        AluguelDomain genero = new AluguelDomain()
+                        //Instancia um objeto genero do tipo ClienteDomain
+                        AluguelDomain aluguel = new AluguelDomain()
                         {
                             //atribui a propriedade idAluguel o valor da primeira coluna na tabela do banco de dados.
                             idAluguel = Convert.ToInt32(rdr[0]),
 
                             //atribui a propriedade idCliente o valor da segunda coluna na tabela do banco de dados.
-                            idCliente = Convert.ToInt32(rdr[0]),
+                            idCliente = Convert.ToInt32(rdr[1]),
 
                             //atribui a propriedade idVeiculo o valor da terceira coluna na tabela do banco de dados.
-                            idVeiculo = Convert.ToInt32(rdr[0]),
+                            idVeiculo = Convert.ToInt32(rdr[2]),
 
                             //atribui a propriedade dataRetirada o valor da quarta coluna na tabela do banco de dados.
-                            dataRetirada = rdr[1].ToString(),
+                            dataRetirada = rdr[3].ToString(),
 
                             //atribui a propriedade dataDevolucao o valor da quinta coluna na tabela do banco de dados.
-                            dataDevolucao = rdr[1].ToString()
+                            dataDevolucao = rdr[4].ToString()
                         };
 
-                        //Adicionar o objeto genero criado a lista listaGeneros.
-                        listaAluguel.Add(genero);
+                        //Adicionar o objeto aluguel criado a lista listaAlugueis.
+                        listaAluguel.Add(aluguel);
                     }
                 }
             }
